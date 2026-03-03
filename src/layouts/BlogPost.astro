@@ -1,0 +1,138 @@
+---
+import BlogLayout from './BlogLayout.astro';
+import { format } from 'date-fns';
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+}
+
+const { title, description, date } = Astro.props;
+---
+
+<BlogLayout title={`${title} — Lukas Andersen`} description={description}>
+  <article class="min-h-screen">
+    <div class="max-w-[680px] mx-auto px-6 py-20">
+      <header class="mb-12">
+        <a
+          href="/blog"
+          class="text-[14px] text-text-secondary hover:underline mb-8 block"
+        >
+          ← Back to blog
+        </a>
+        <time class="text-[14px] text-text-secondary font-sans mb-4 block">
+          {format(date, 'MMMM d, yyyy')}
+        </time>
+        <h1 class="text-[28px] font-semibold tracking-[0.03em] text-text-primary leading-tight">
+          {title}
+        </h1>
+      </header>
+
+      <div class="blog-prose font-serif text-[18px] leading-[1.75] text-text-primary">
+        <slot />
+      </div>
+    </div>
+  </article>
+</BlogLayout>
+
+<style>
+  .blog-prose :global(h2) {
+    font-family: var(--font-sans);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-text-primary);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog-prose :global(h3) {
+    font-family: var(--font-sans);
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .blog-prose :global(p) {
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-prose :global(a) {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .blog-prose :global(a:hover) {
+    text-decoration: underline;
+  }
+
+  .blog-prose :global(strong) {
+    font-weight: 600;
+  }
+
+  .blog-prose :global(blockquote) {
+    border-left: 3px solid var(--color-border-default);
+    padding-left: 1.25rem;
+    margin: 2rem 0;
+    color: var(--color-text-secondary);
+    font-style: normal;
+  }
+
+  .blog-prose :global(ul),
+  .blog-prose :global(ol) {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-prose :global(ul) {
+    list-style-type: disc;
+  }
+
+  .blog-prose :global(ol) {
+    list-style-type: decimal;
+  }
+
+  .blog-prose :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-prose :global(code) {
+    font-size: 0.9em;
+    background-color: var(--color-bg-surface);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+  }
+
+  .blog-prose :global(pre) {
+    background-color: #2a2825;
+    color: #e8e6e1;
+    padding: 1.25rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 2rem 0;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .blog-prose :global(pre code) {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+  }
+
+  .blog-prose :global(hr) {
+    border: none;
+    border-top: 1px solid var(--color-border-default);
+    margin: 3rem 0;
+  }
+
+  .blog-prose :global(img) {
+    max-width: 100%;
+    border-radius: 4px;
+    margin: 2rem 0;
+  }
+</style>

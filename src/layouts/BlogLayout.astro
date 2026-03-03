@@ -1,0 +1,42 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <nav class="fixed top-0 w-full bg-bg-primary/90 backdrop-blur-sm border-b border-border-default z-50">
+    <div class="max-w-[680px] mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a
+          href="/"
+          class="text-[14px] font-semibold tracking-[0.03em] text-text-primary"
+        >
+          Lukas Andersen
+        </a>
+        <div class="flex items-center gap-6">
+          <a
+            href="/"
+            class="text-[14px] text-text-secondary hover:underline"
+          >
+            Home
+          </a>
+          <a
+            href="/blog"
+            class="text-[14px] text-text-secondary hover:underline"
+          >
+            Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="pt-16">
+    <slot />
+  </div>
+</BaseLayout>

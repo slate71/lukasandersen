@@ -1,0 +1,168 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <header
+        class="min-h-[50vh] flex flex-col justify-end pb-12 md:pb-16 px-6 md:px-12 lg:px-20 max-w-[1200px] mx-auto"
+    >
+        <h1
+            class="font-serif text-[clamp(3rem,8vw,7.5rem)] font-light leading-[0.95] tracking-[-0.02em] text-text-primary"
+        >
+            Lukas Andersen
+        </h1>
+        <div
+            class="flex flex-col md:flex-row md:items-baseline md:justify-between mt-6 gap-4"
+        >
+            <p class="text-[17px] text-text-secondary">
+                AI systems for service businesses
+            </p>
+            <nav>
+                <a
+                    href="/blog"
+                    class="text-[13px] uppercase tracking-[0.12em] text-text-muted hover:text-accent transition-colors"
+                    >Blog</a
+                >
+            </nav>
+        </div>
+    </header>
+
+    <!-- <section class="py-12 md:py-16 px-6 md:px-12 lg:px-20 max-w-[1200px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-12">
+      <div class="md:col-span-7 lg:col-span-6">
+        <p class="text-text-secondary mb-6">I'm a senior full stack engineer and technical operator with 12+ years building complex software systems — data visualization platforms, multi-tenant architecture, engineering teams from the ground up. I've led teams at companies scaling from early stage through acquisition.</p>
+        <p class="text-text-secondary">Now I work at the intersection of AI and operations, building automations that handle the coordination, scheduling, and communication work that keeps service businesses running.</p>
+      </div>
+    </div>
+  </section> -->
+
+    <section
+        class="pt-12 pb-24 md:pb-32 px-6 md:px-12 lg:px-20 max-w-[1200px] mx-auto"
+    >
+        <h2
+            class="text-[13px] uppercase tracking-[0.12em] text-text-muted mb-16"
+        >
+            What I Do
+        </h2>
+
+        <div class="space-y-16 md:space-y-20">
+            <div class="grid grid-cols-1 md:grid-cols-12">
+                <h3
+                    class="text-[22px] md:text-[24px] font-medium leading-[1.2] text-text-primary md:col-span-4 mb-4 md:mb-0"
+                >
+                    AI Operations for Service Businesses
+                </h3>
+                <p class="text-text-secondary md:col-span-6 md:col-start-6">
+                    I design and build AI systems that automate the operational
+                    core of service companies — dispatch, customer
+                    communication, scheduling, follow-up. Not chatbots. Real
+                    workflow automation that replaces manual coordination.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12">
+                <h3
+                    class="text-[22px] md:text-[24px] font-medium leading-[1.2] text-text-primary md:col-span-4 mb-4 md:mb-0"
+                >
+                    Technical Leadership
+                </h3>
+                <p class="text-text-secondary md:col-span-6 md:col-start-6">
+                    I've built and led engineering teams through high-growth
+                    scaling, complex migrations, and zero-to-one product
+                    launches. Available for fractional or advisory engagements
+                    with AI-native teams.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12">
+                <h3
+                    class="text-[22px] md:text-[24px] font-medium leading-[1.2] text-text-primary md:col-span-4 mb-4 md:mb-0"
+                >
+                    Systems Architecture
+                </h3>
+                <p class="text-text-secondary md:col-span-6 md:col-start-6">
+                    Deep experience in TypeScript, React, and modern
+                    infrastructure. I build tools and systems designed to
+                    compound — each piece makes the next one easier.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-bg-dark py-24 lg:py-32">
+        <div class="px-6 md:px-12 lg:px-20 max-w-[1200px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12">
+                <h2
+                    class="text-[13px] uppercase tracking-[0.12em] text-text-secondary-on-dark md:col-span-4 mb-8 md:mb-0"
+                >
+                    Now
+                </h2>
+                <div class="md:col-span-7 md:col-start-6">
+                    <p
+                        class="text-[19px] md:text-[22px] leading-[1.6] text-text-on-dark mb-6"
+                    >
+                        I'm building Grund — an AI operations toolkit for
+                        service businesses. My current focus is automating
+                        end-to-end operations for a pest control company:
+                        intake, scheduling, routing, customer communication, and
+                        reporting.
+                    </p>
+                    <p class="text-text-secondary-on-dark">
+                        Turning manual workflows into systems that run
+                        themselves. I publish what I learn along the way.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-bg-primary py-20 md:py-24">
+        <div class="px-6 md:px-12 lg:px-20 max-w-[1200px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-0">
+                <div class="md:col-span-4">
+                    <p
+                        class="text-[13px] uppercase tracking-[0.12em] text-text-muted mb-4"
+                    >
+                        Lukas Andersen
+                    </p>
+                    <p class="text-[15px] text-text-secondary">
+                        Technical Consultant
+                    </p>
+                </div>
+                <div class="md:col-span-3 md:col-start-6">
+                    <p
+                        class="text-[13px] uppercase tracking-[0.12em] text-text-muted mb-4"
+                    >
+                        Contact
+                    </p>
+                    <a
+                        href="mailto:lukas@lukasandersen.com"
+                        class="text-[15px] text-text-primary hover:text-accent transition-colors block"
+                        >lukas@lukasandersen.com</a
+                    >
+                </div>
+                <div class="md:col-span-3 md:col-start-10">
+                    <p
+                        class="text-[13px] uppercase tracking-[0.12em] text-text-muted mb-4"
+                    >
+                        Elsewhere
+                    </p>
+                    <a
+                        href="https://linkedin.com/in/lukasandersen"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-[15px] text-text-primary hover:text-accent transition-colors block mb-2"
+                        >LinkedIn</a
+                    >
+                    <a
+                        href="https://github.com/slate71"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-[15px] text-text-primary hover:text-accent transition-colors block"
+                        >GitHub</a
+                    >
+                </div>
+            </div>
+        </div>
+    </footer>
+</BaseLayout>
