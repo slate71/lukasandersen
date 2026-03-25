@@ -33,5 +33,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
+# astro
+/.astro
+
 # Local Netlify folder
 .netlify

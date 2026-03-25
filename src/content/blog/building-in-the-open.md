@@ -2,7 +2,7 @@
 title: "Building in the Open"
 description: "Why I decided to write about the tools, decisions, and tradeoffs behind my work as a technical consultant."
 date: 2026-03-03
-draft: false
+draft: true
 ---
 
 Most of what I build never gets written about. The interesting parts — the tradeoffs, the false starts, the moments where a simpler approach wins — happen quietly and disappear into commit history.
